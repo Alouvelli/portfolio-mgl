@@ -1,0 +1,80 @@
+[
+  {
+    "id": "m1",
+    "titre": "Conception et développement d'une plateforme de gestion des stages et des projets de fin d'études",
+    "etudiant": "Mamadou Diallo",
+    "encadreur": "Dr. Ibrahima Fall",
+    "anneeAcademique": "2023–2024",
+    "dateSoutenance": "2024-07-18",
+    "mention": "Très Bien",
+    "statut": "Soutenu",
+    "thematique": "Génie Logiciel",
+    "motsCles": ["plateforme", "gestion de stages", "React", "Node.js"],
+    "resume_url": "#"
+  },
+  {
+    "id": "m2",
+    "titre": "Mise en place d'une architecture microservices pour un système bancaire mobile",
+    "etudiant": "Aïssatou Baldé",
+    "encadreur": "Pr. Oumar Sylla",
+    "anneeAcademique": "2023–2024",
+    "dateSoutenance": "2024-07-22",
+    "mention": "Bien",
+    "statut": "Soutenu",
+    "thematique": "Architecture Logicielle",
+    "motsCles": ["microservices", "banking", "API REST", "Docker"],
+    "resume_url": "#"
+  },
+  {
+    "id": "m3",
+    "titre": "Développement d'un système de détection d'anomalies par apprentissage automatique dans les réseaux informatiques",
+    "etudiant": "Boubacar Kouyaté",
+    "encadreur": "Dr. Fatoumata Camara",
+    "anneeAcademique": "2022–2023",
+    "dateSoutenance": "2023-08-05",
+    "mention": "Très Bien",
+    "statut": "Soutenu",
+    "thematique": "Intelligence Artificielle",
+    "motsCles": ["machine learning", "cybersécurité", "détection d'intrusion", "Python"],
+    "resume_url": "#"
+  },
+  {
+    "id": "m4",
+    "titre": "Implémentation d'une application mobile de suivi de santé connectée aux établissements de soins",
+    "etudiant": "Mariama Diallo",
+    "encadreur": "Dr. Ibrahima Fall",
+    "anneeAcademique": "2022–2023",
+    "dateSoutenance": "2023-07-28",
+    "mention": "Assez Bien",
+    "statut": "Soutenu",
+    "thematique": "Développement Mobile",
+    "motsCles": ["santé numérique", "Flutter", "IoT", "Firebase"],
+    "resume_url": "#"
+  },
+  {
+    "id": "m5",
+    "titre": "Conception d'un système de vote électronique sécurisé basé sur la technologie blockchain",
+    "etudiant": "Alpha Sow",
+    "encadreur": "Pr. Oumar Sylla",
+    "anneeAcademique": "2024–2025",
+    "dateSoutenance": null,
+    "mention": null,
+    "statut": "En cours",
+    "thematique": "Sécurité Informatique",
+    "motsCles": ["blockchain", "vote électronique", "cryptographie", "Solidity"],
+    "resume_url": null
+  },
+  {
+    "id": "m6",
+    "titre": "Développement d'un assistant pédagogique intelligent pour l'enseignement supérieur",
+    "etudiant": "Kadiatou Bah",
+    "encadreur": "Dr. Fatoumata Camara",
+    "anneeAcademique": "2024–2025",
+    "dateSoutenance": null,
+    "mention": null,
+    "statut": "En cours",
+    "thematique": "Intelligence Artificielle",
+    "motsCles": ["IA générative", "LLM", "éducation", "chatbot"],
+    "resume_url": null
+  }
+]

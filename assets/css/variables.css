@@ -1,0 +1,149 @@
+/* ============================================================
+   PORTFOLIO MASTER GÉNIE LOGICIEL — SYSTÈME DE DESIGN
+   Variables CSS (Design Tokens)
+   ============================================================ */
+
+:root {
+
+  /* ===== COULEURS IDENTITÉ INSTITUTIONNELLE ===== */
+
+  /* Primaire : Bleu nuit académique */
+  --primary-color:   hsl(215, 72%, 32%);   /* #1a3d6e */
+  --primary-light:   hsl(215, 72%, 52%);   /* #2563a8 */
+  --primary-dark:    hsl(215, 72%, 22%);   /* #112a4a */
+  --primary-100:     hsl(215, 60%, 95%);   /* Fond teinté léger */
+  --primary-200:     hsl(215, 60%, 88%);
+
+  /* Secondaire : Vert ANAQ (validation, confiance) */
+  --secondary-color: hsl(155, 60%, 35%);   /* #238c5f */
+  --secondary-light: hsl(155, 60%, 48%);
+  --secondary-100:   hsl(155, 45%, 93%);
+
+  /* Accent : Or académique (excellence, distinctions) */
+  --accent-color:    hsl(42, 85%, 45%);    /* #d4920d */
+  --accent-light:    hsl(42, 85%, 62%);
+  --accent-100:      hsl(42, 70%, 93%);
+
+  /* ===== GRADIENTS ===== */
+  --gradient-hero: linear-gradient(
+    135deg,
+    hsl(215, 72%, 22%) 0%,
+    hsl(215, 72%, 38%) 55%,
+    hsl(215, 55%, 46%) 100%
+  );
+  --gradient-section-header: linear-gradient(
+    90deg,
+    hsl(215, 72%, 32%) 0%,
+    hsl(155, 60%, 35%) 100%
+  );
+  --gradient-card: linear-gradient(
+    135deg,
+    rgba(26, 61, 110, 0.03) 0%,
+    rgba(35, 140, 95, 0.015) 100%
+  );
+
+  /* ===== FONDS ET SURFACES ===== */
+  --bg-body:        #f5f7fa;
+  --bg-card:        #ffffff;
+  --bg-surface:     #eef1f6;
+  --bg-section-alt: #f0f4f9;
+  --bg-nav:         rgba(255, 255, 255, 0.97);
+  --bg-overlay:     rgba(17, 42, 74, 0.72);
+
+  /* ===== GLASSMORPHISM ===== */
+  --glass-bg:          rgba(255, 255, 255, 0.65);
+  --glass-bg-strong:   rgba(255, 255, 255, 0.82);
+  --glass-bg-dark:     rgba(255, 255, 255, 0.08);
+  --glass-border:      rgba(255, 255, 255, 0.55);
+  --glass-border-dark: rgba(255, 255, 255, 0.16);
+  --glass-blur:        blur(14px);
+  --glass-blur-sm:     blur(8px);
+  --glass-shadow:      0 8px 32px rgba(26, 61, 110, 0.12),
+                       inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  --glass-shadow-dark: 0 4px 20px rgba(0, 0, 0, 0.20);
+
+  /* ===== TEXTE ===== */
+  --text-primary:   #1a2332;
+  --text-secondary: #3d5166;
+  --text-muted:     #7a8fa6;
+  --text-inverse:   #ffffff;
+  --text-accent:    var(--accent-color);
+  --text-link:      var(--primary-light);
+
+  /* ===== BORDURES ===== */
+  --border-color:   rgba(26, 61, 110, 0.12);
+  --border-light:   rgba(26, 61, 110, 0.06);
+  --border-strong:  rgba(26, 61, 110, 0.25);
+
+  /* ===== OMBRES ===== */
+  --shadow-xs:   0 1px 3px rgba(26, 61, 110, 0.06);
+  --shadow-sm:   0 2px 8px rgba(26, 61, 110, 0.09);
+  --shadow-md:   0 4px 20px rgba(26, 61, 110, 0.12);
+  --shadow-lg:   0 8px 32px rgba(26, 61, 110, 0.16);
+  --shadow-hover:0 8px 40px rgba(26, 61, 110, 0.20);
+
+  /* ===== TYPOGRAPHIE ===== */
+  --font-heading: 'Roboto', sans-serif;
+  --font-body:    'Roboto', sans-serif;
+
+  --text-xs:   0.75rem;    /* 12px */
+  --text-sm:   0.875rem;   /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-lg:   1.125rem;   /* 18px */
+  --text-xl:   1.25rem;    /* 20px */
+  --text-2xl:  1.5rem;     /* 24px */
+  --text-3xl:  1.875rem;   /* 30px */
+  --text-4xl:  2.25rem;    /* 36px */
+  --text-5xl:  3rem;       /* 48px */
+
+  --fw-normal:   400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+
+  --lh-tight:  1.2;
+  --lh-snug:   1.4;
+  --lh-normal: 1.6;
+  --lh-relaxed:1.75;
+
+  /* ===== DIMENSIONS ===== */
+  --header-height:   72px;
+  --content-max-w:   1200px;
+  --sidebar-width:   260px;
+  --section-py:      80px;
+  --card-p:          28px;
+
+  /* ===== RAYONS ===== */
+  --radius-sm:   6px;
+  --radius-md:   10px;
+  --radius-lg:   16px;
+  --radius-xl:   24px;
+  --radius-full: 9999px;
+
+  /* ===== TRANSITIONS ===== */
+  --ease-out:  cubic-bezier(0.4, 0, 0.2, 1);
+  --t-fast:    150ms var(--ease-out);
+  --t-base:    250ms var(--ease-out);
+  --t-slow:    400ms var(--ease-out);
+
+  /* ===== STATUTS ===== */
+  --status-success:    #16a34a;
+  --status-warning:    #d97706;
+  --status-danger:     #dc2626;
+  --status-info:       #2563eb;
+  --status-neutral:    #64748b;
+
+  --status-success-bg: #f0fdf4;
+  --status-warning-bg: #fffbeb;
+  --status-danger-bg:  #fef2f2;
+  --status-info-bg:    #eff6ff;
+  --status-neutral-bg: #f8fafc;
+
+  /* ===== Z-INDEX ===== */
+  --z-base:     1;
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-overlay:  300;
+  --z-modal:    400;
+  --z-toast:    500;
+}

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — Administration Master GL</title>
+
+  <link rel="stylesheet" href="../assets/css/variables.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body>
+
+  <div class="admin-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="admin-sidebar" id="admin-sidebar">
+      <div class="sidebar-header">
+        <div class="logo-icon" style="width:32px;height:32px;font-size:var(--text-sm);">GL</div>
+        <div class="logo-text">
+          <span class="logo-main">Master GL</span>
+          <span class="logo-sub">Administration</span>
+        </div>
+      </div>
+
+      <nav>
+        <div class="sidebar-section-label">Général</div>
+        <a href="dashboard.html"         class="sidebar-link active"><span class="link-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span> Tableau de bord</a>
+        <a href="upload.html"            class="sidebar-link"><span class="link-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></span> Téléverser un document</a>
+
+        <div class="sidebar-section-label" style="margin-top:12px;">Section 1</div>
+        <a href="gestion-section1.html"  class="sidebar-link"><span class="link-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg></span> Cadre Pédagogique</a>
+
+        <div class="sidebar-section-label" style="margin-top:12px;">Section 2</div>
+        <a href="gestion-section2.html"  class="sidebar-link"><span class="link-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6v11l3.5 6H5.5L9 14V3z"/><line x1="9" y1="3" x2="15" y2="3"/></svg></span> Recherche & Stage</a>
+
+        <div class="sidebar-section-label" style="margin-top:12px;">Section 3</div>
+        <a href="gestion-section3.html"  class="sidebar-link"><span class="link-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></svg></span> Mémoires & Galerie</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="../index.html"     class="sidebar-link"><span class="link-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span> Voir le portfolio</a>
+        <a href="#" data-action="logout" class="sidebar-link"><span class="link-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg></span> Déconnexion</a>
+      </div>
+    </aside>
+
+    <!-- CONTENU -->
+    <div class="admin-content">
+
+      <header class="admin-topbar">
+        <div>
+          <div class="topbar-title">Tableau de bord <span>/ Vue d'ensemble</span></div>
+        </div>
+        <div class="topbar-actions">
+          <a href="upload.html" class="btn btn-primary btn-sm"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg> Uploader un document</a>
+          <div class="admin-avatar" id="user-initials" title="Connecté">A</div>
+        </div>
+      </header>
+
+      <main class="admin-page">
+
+        <div class="admin-page-header">
+          <div>
+            <h1>Tableau de bord</h1>
+            <p>Vue d'ensemble du portfolio — Dernière mise à jour : <span id="last-update">…</span></p>
+          </div>
+        </div>
+
+        <!-- STATISTIQUES -->
+        <div class="dashboard-stats">
+          <div class="stat-card">
+            <div class="stat-card-icon blue"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+            <div class="stat-card-info">
+              <div class="count" id="stat-total-memoires">—</div>
+              <div class="label">Mémoires total</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-icon green"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+            <div class="stat-card-info">
+              <div class="count" id="stat-soutenus">—</div>
+              <div class="label">Soutenus</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-icon amber"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+            <div class="stat-card-info">
+              <div class="count" id="stat-photos">—</div>
+              <div class="label">Photos galerie</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-icon purple"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+            <div class="stat-card-info">
+              <div class="count" id="stat-temoignages">—</div>
+              <div class="label">Témoignages</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ACTIONS RAPIDES -->
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:28px;">
+
+          <div class="admin-card">
+            <div class="admin-card-header"><h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg> Accès rapides</h3></div>
+            <div class="admin-card-body" style="display:flex;flex-direction:column;gap:8px;">
+              <a href="gestion-section1.html" class="btn btn-ghost" style="justify-content:flex-start;"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg> Modifier Section 1</a>
+              <a href="gestion-section2.html" class="btn btn-ghost" style="justify-content:flex-start;"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6v11l3.5 6H5.5L9 14V3z"/><line x1="9" y1="3" x2="15" y2="3"/></svg> Modifier Section 2</a>
+              <a href="gestion-section3.html" class="btn btn-ghost" style="justify-content:flex-start;"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></svg> Gérer les mémoires</a>
+              <a href="upload.html"           class="btn btn-primary btn-sm" style="margin-top:4px;"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg> Uploader un document</a>
+            </div>
+          </div>
+
+          <div class="admin-card">
+            <div class="admin-card-header"><h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg> Sections du portfolio</h3></div>
+            <div class="admin-card-body">
+              <div style="display:flex;flex-direction:column;gap:10px;">
+                <div style="display:flex;align-items:center;justify-content:space-between;">
+                  <span style="font-size:var(--text-sm);"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg> Cadre Pédagogique</span>
+                  <div style="display:flex;gap:6px;">
+                    <a href="gestion-section1.html" class="btn btn-ghost btn-sm">Modifier</a>
+                    <a href="../section1.html" target="_blank" class="btn btn-secondary btn-sm">Voir</a>
+                  </div>
+                </div>
+                <div style="display:flex;align-items:center;justify-content:space-between;">
+                  <span style="font-size:var(--text-sm);"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6v11l3.5 6H5.5L9 14V3z"/><line x1="9" y1="3" x2="15" y2="3"/></svg> Recherche & Stage</span>
+                  <div style="display:flex;gap:6px;">
+                    <a href="gestion-section2.html" class="btn btn-ghost btn-sm">Modifier</a>
+                    <a href="../section2.html" target="_blank" class="btn btn-secondary btn-sm">Voir</a>
+                  </div>
+                </div>
+                <div style="display:flex;align-items:center;justify-content:space-between;">
+                  <span style="font-size:var(--text-sm);"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></svg> Archives & Galerie</span>
+                  <div style="display:flex;gap:6px;">
+                    <a href="gestion-section3.html" class="btn btn-ghost btn-sm">Modifier</a>
+                    <a href="../section3.html" target="_blank" class="btn btn-secondary btn-sm">Voir</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="admin-card">
+            <div class="admin-card-header"><h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg> Configuration</h3></div>
+            <div class="admin-card-body">
+              <div class="form-group">
+                <label class="form-label">Nom de l'université</label>
+                <input type="text" class="form-control" id="config-univ" placeholder="Ex : ISI — Institut Supérieur d'Informatique">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Année d'accréditation</label>
+                <input type="text" class="form-control" id="config-annee" placeholder="Ex : 2024-2026">
+              </div>
+              <button class="btn btn-primary btn-sm" id="btn-save-config"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Enregistrer</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- DERNIERS MÉMOIRES -->
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></svg> Derniers mémoires ajoutés</h3>
+            <a href="gestion-section3.html" class="btn btn-ghost btn-sm">Voir tout →</a>
+          </div>
+          <div class="admin-table-wrap">
+            <table class="admin-table" id="recent-memoires-table">
+              <thead>
+                <tr>
+                  <th>Titre</th>
+                  <th>Étudiant</th>
+                  <th>Année</th>
+                  <th>Statut</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="recent-memoires-body">
+                <tr>
+                  <td colspan="5" style="text-align:center;padding:24px;color:var(--text-muted);">
+                    <div class="spinner" style="margin:0 auto 8px;"></div>
+                    Chargement…
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Toggle mobile sidebar -->
+  <button class="admin-mobile-toggle" id="admin-sidebar-toggle" aria-label="Menu"><svg style="width:20px;height:20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+
+  <script type="module">
+    import { checkAdminAccess, initLogoutButtons } from '../assets/js/auth.js';
+    import { db } from '../assets/js/firebase-config.js';
+    import {
+      collection, getDocs, getDoc, doc, setDoc,
+      query, orderBy, limit, where
+    } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js';
+    import { showToast, escapeHtml, formatDate } from '../assets/js/utils.js';
+
+    // Garde admin
+    const user = await checkAdminAccess();
+    document.getElementById('user-initials').textContent = (user.email || 'A')[0].toUpperCase();
+    initLogoutButtons();
+    document.getElementById('last-update').textContent = new Date().toLocaleDateString('fr-FR');
+
+    // Stats
+    async function loadStats() {
+      const [memAll, memSout, photos, temos] = await Promise.all([
+        getDocs(collection(db, 'memoires')).then(s => s.size),
+        getDocs(query(collection(db, 'memoires'), where('statut','==','soutenu'))).then(s => s.size),
+        getDocs(collection(db, 'galerie')).then(s => s.size),
+        getDocs(query(collection(db, 'temoignages'), where('visible','==',true))).then(s => s.size),
+      ]);
+      document.getElementById('stat-total-memoires').textContent = memAll;
+      document.getElementById('stat-soutenus').textContent       = memSout;
+      document.getElementById('stat-photos').textContent         = photos;
+      document.getElementById('stat-temoignages').textContent    = temos;
+    }
+    loadStats();
+
+    // Mémoires récents
+    async function loadRecentMemoires() {
+      const snap = await getDocs(query(collection(db, 'memoires'), orderBy('createdAt','desc'), limit(5)));
+      const tbody = document.getElementById('recent-memoires-body');
+      if (!tbody) return;
+      if (snap.empty) {
+        tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:var(--text-muted);">Aucun mémoire enregistré.</td></tr>';
+        return;
+      }
+      const STATUS = { soutenu: ['badge-soutenu','✓ Soutenu'], en_cours: ['badge-en-cours','En cours'], archive: ['badge-archive','Archive'] };
+      tbody.innerHTML = snap.docs.map(d => {
+        const m = d.data();
+        const [bc, bl] = STATUS[m.statut] || ['badge-archive','—'];
+        return `<tr>
+          <td style="font-weight:var(--fw-medium);max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="${escapeHtml(m.titre||'')}">${escapeHtml(m.titre||'—')}</td>
+          <td>${escapeHtml(m.etudiant||'—')}</td>
+          <td>${escapeHtml(m.anneeAcademique||'—')}</td>
+          <td><span class="badge ${bc}">${bl}</span></td>
+          <td class="actions">
+            <a href="gestion-section3.html?edit=${d.id}" class="btn btn-ghost btn-sm"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> Modifier</a>
+          </td>
+        </tr>`;
+      }).join('');
+    }
+    loadRecentMemoires();
+
+    // Config site
+    const configSnap = await getDoc(doc(db, 'site_config', 'general'));
+    if (configSnap.exists()) {
+      const cfg = configSnap.data();
+      document.getElementById('config-univ').value  = cfg.nomUniversite || '';
+      document.getElementById('config-annee').value = cfg.anneeAccreditation || '';
+    }
+
+    document.getElementById('btn-save-config').addEventListener('click', async () => {
+      const univ  = document.getElementById('config-univ').value.trim();
+      const annee = document.getElementById('config-annee').value.trim();
+      try {
+        await setDoc(doc(db, 'site_config', 'general'), { nomUniversite: univ, anneeAccreditation: annee }, { merge: true });
+        showToast('Configuration enregistrée.', 'success');
+      } catch (e) {
+        showToast('Erreur lors de l\'enregistrement.', 'error');
+      }
+    });
+  </script>
+
+</body>
+</html>

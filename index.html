@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio numérique du Master Génie Logiciel — Programme, ressources et mémoires des étudiants">
+  <title>Portfolio Master Génie Logiciel</title>
+
+  <!-- Google Fonts (preconnect pour chargement anticipé) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/sections.css">
+</head>
+<body>
+
+  <!-- Barre de progression de lecture -->
+  <div class="reading-progress" id="reading-progress"></div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="header-logo" aria-label="Accueil Portfolio Master GL">
+        <div class="logo-icon">GL</div>
+        <div class="logo-text">
+          <span class="logo-main">Master Génie Logiciel</span>
+          <span class="logo-sub">Master GL</span>
+        </div>
+      </a>
+
+      <nav class="header-nav" aria-label="Navigation principale">
+        <a href="index.html"    class="nav-link active"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Accueil</a>
+        <a href="section1.html" class="nav-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Cadre Pédagogique</a>
+        <a href="section2.html" class="nav-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.31L5.5 18A2 2 0 0 0 7.36 21h9.28a2 2 0 0 0 1.86-2.69L14 9.31V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg> Recherche &amp; Stage</a>
+        <a href="section3.html" class="nav-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="22" height="4" x="1" y="3" rx="1"/><path d="M10 12h4"/><rect x="1" y="7" width="22" height="14" rx="1"/></svg> Archives</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="admin/index.html" class="btn btn-admin no-print"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg> Administration</a>
+        <button class="btn-hamburger no-print" id="hamburger-btn" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menu mobile -->
+  <nav class="mobile-menu no-print" id="mobile-menu" aria-label="Menu mobile">
+    <a href="index.html"    class="nav-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Accueil</a>
+    <a href="section1.html" class="nav-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Cadre Pédagogique</a>
+    <a href="section2.html" class="nav-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.31L5.5 18A2 2 0 0 0 7.36 21h9.28a2 2 0 0 0 1.86-2.69L14 9.31V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg> Recherche &amp; Stage</a>
+    <a href="section3.html" class="nav-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="22" height="4" x="1" y="3" rx="1"/><path d="M10 12h4"/><rect x="1" y="7" width="22" height="14" rx="1"/></svg> Archives</a>
+    <a href="admin/index.html" class="nav-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg> Administration</a>
+  </nav>
+
+  <!-- ===== CONTENU PRINCIPAL ===== -->
+  <main class="page-main" id="main-content">
+
+    <!-- HERO -->
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-layout">
+
+          <!-- Contenu texte (gauche) -->
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Portfolio Officiel du Programme</span>
+            </div>
+            <h1 id="hero-title" class="hero-title">
+              Master<br>
+              <span class="hero-accent">Génie Logiciel</span>
+            </h1>
+            <p class="hero-subtitle">
+              Portfolio numérique regroupant l'ensemble des preuves de qualité du programme :
+              cadre pédagogique, processus de recherche et archives des mémoires soutenus.
+            </p>
+            <div class="hero-actions">
+              <a href="section1.html" class="btn btn-primary btn-lg">Explorer le programme</a>
+              <a href="section2.html" class="btn btn-secondary btn-lg">Documents officiels</a>
+            </div>
+            <div class="hero-meta">
+              <span id="hero-annee">Promotion 2024–2026</span>
+              <span>·</span>
+              <span id="hero-univ">Université — ISI</span>
+            </div>
+          </div>
+
+          <!-- Panneau visuel (droite, desktop uniquement) -->
+          <div class="hero-visual" aria-hidden="true">
+            <div class="hero-float-card">
+              <span class="hero-float-num">01</span>
+              <span>Cadre Stratégique<br>et Pédagogique</span>
+            </div>
+            <div class="hero-float-card">
+              <span class="hero-float-num">02</span>
+              <span>Processus de Recherche<br>et de Stage</span>
+            </div>
+            <div class="hero-float-card">
+              <span class="hero-float-num">03</span>
+              <span>Dynamiques en Cours<br>et Archives</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="hero-decoration" aria-hidden="true"></div>
+    </section>
+
+    <!-- STATISTIQUES ANIMÉES -->
+    <section class="stats-banner" aria-label="Statistiques du programme">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+            <div class="stat-num" data-target="0" id="stat-memoires">—</div>
+            <div class="stat-desc">Mémoires soutenus</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+            <div class="stat-num" data-target="4" id="stat-annees">4</div>
+            <div class="stat-desc">Années de promotions</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+            <div class="stat-num" data-target="0" id="stat-documents">—</div>
+            <div class="stat-desc">Documents archivés</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+            <div class="stat-num" data-target="0" id="stat-photos">—</div>
+            <div class="stat-desc">Photos de soutenances</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NAVIGATION SECTIONS -->
+    <section class="section-block" id="sections-nav">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Structure du portfolio</div>
+          <h2>Trois axes documentaires</h2>
+          <div class="section-divider"></div>
+          <p>Ce portfolio vous présente le programme de formation, les ressources pédagogiques et les projets de recherche des étudiants.</p>
+        </div>
+
+        <div class="grid-3">
+
+          <!-- Carte Section 1 -->
+          <a href="section1.html" class="card card-nav card-nav-1 animate-fade-in-up">
+            <div class="card-num">01</div>
+            <div class="card-icon" style="margin-bottom:12px;"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <h3>Cadre Stratégique et Pédagogique</h3>
+            <p>Présentation du programme, objectifs de formation, compétences visées, débouchés professionnels et organisation des enseignements.</p>
+            <div class="card-arrow">Consulter <span>→</span></div>
+          </a>
+
+          <!-- Carte Section 2 -->
+          <a href="section2.html" class="card card-nav card-nav-2 animate-fade-in-up" style="animation-delay:0.1s;">
+            <div class="card-num">02</div>
+            <div class="card-icon" style="margin-bottom:12px;"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.31L5.5 18A2 2 0 0 0 7.36 21h9.28a2 2 0 0 0 1.86-2.69L14 9.31V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg></div>
+            <h3>Processus de Recherche et de Stage</h3>
+            <p>Chronogramme des mémoires, canevas de rédaction, fiches de dépôt et de suivi, modalités de soutenance et grilles d'évaluation.</p>
+            <div class="card-arrow">Consulter <span>→</span></div>
+          </a>
+
+          <!-- Carte Section 3 -->
+          <a href="section3.html" class="card card-nav card-nav-3 animate-fade-in-up" style="animation-delay:0.2s;">
+            <div class="card-num">03</div>
+            <div class="card-icon" style="margin-bottom:12px;"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="22" height="4" x="1" y="3" rx="1"/><path d="M10 12h4"/><rect x="1" y="7" width="22" height="14" rx="1"/></svg></div>
+            <h3>Dynamiques en Cours et Archives</h3>
+            <p>Sujets de mémoires 2025–2026, archive des mémoires soutenus (2022–2025) et galerie photos des soutenances.</p>
+            <div class="card-arrow">Consulter <span>→</span></div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MÉMOIRES RÉCENTS -->
+    <section class="section-block alt-bg" id="memoires-recents">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Derniers travaux</div>
+          <h2>Mémoires récemment soutenus</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="grid-3" id="memoires-recents-grid">
+          <!-- Skeleton par défaut -->
+          <div class="card"><div class="skeleton skeleton-title"></div><div class="skeleton skeleton-text"></div><div class="skeleton skeleton-text short"></div></div>
+          <div class="card"><div class="skeleton skeleton-title"></div><div class="skeleton skeleton-text"></div><div class="skeleton skeleton-text short"></div></div>
+          <div class="card"><div class="skeleton skeleton-title"></div><div class="skeleton skeleton-text"></div><div class="skeleton skeleton-text short"></div></div>
+        </div>
+
+        <div style="text-align:center; margin-top:32px;">
+          <a href="section3.html" class="btn btn-secondary">Voir tous les mémoires →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="header-logo" style="margin-bottom:12px;">
+            <div class="logo-icon">GL</div>
+            <div class="logo-text">
+              <span class="logo-main">Master Génie Logiciel</span>
+              <span class="logo-sub">Master GL</span>
+            </div>
+          </div>
+          <p id="footer-desc">Portfolio numérique du Master Génie Logiciel — Explorez le programme, les ressources et les projets des étudiants.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="section1.html">Cadre Pédagogique</a></li>
+            <li><a href="section2.html">Recherche & Stage</a></li>
+            <li><a href="section3.html">Archives</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Administration</h4>
+          <ul>
+            <li><a href="admin/index.html">Espace admin</a></li>
+            <li><a href="admin/upload.html">Déposer un document</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span id="footer-copyright">© <span id="current-year"></span> — Master Génie Logiciel.</span>
+        <span class="footer-badge"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Programme Officiel</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="assets/js/navigation.js"></script>
+  <script type="module">
+    import { loadPortfolioStats, loadMemoiresRecents, loadSiteConfig } from './assets/js/static-data.js';
+    import { animateCounter, observeWhenVisible, escapeHtml, formatDate } from './assets/js/utils.js';
+
+    // Année courante
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Config site
+    loadSiteConfig().then(config => {
+      if (!config) return;
+      if (config.anneeAccreditation) {
+        const el = document.getElementById('hero-annee');
+        if (el) el.textContent = `Promotion ${config.anneeAccreditation}`;
+      }
+      if (config.nomUniversite) {
+        const el = document.getElementById('hero-univ');
+        if (el) el.textContent = config.nomUniversite;
+      }
+    });
+
+    // Statistiques animées
+    loadPortfolioStats().then(stats => {
+      observeWhenVisible('.stats-banner', () => {
+        const els = {
+          'stat-memoires':  stats.memoiresSoutenus,
+          'stat-annees':    stats.anneesCouvertes,
+          'stat-documents': stats.totalMemoires,
+          'stat-photos':    stats.totalPhotos,
+        };
+        Object.entries(els).forEach(([id, val]) => {
+          const el = document.getElementById(id);
+          if (el && val > 0) animateCounter(el, val);
+          else if (el && val === 0) el.textContent = '0';
+        });
+      }, 0.1);
+    });
+
+    // Mémoires récents
+    const MENTIONS = { 'Passable': 'badge-en-cours', 'Assez Bien': 'badge-bien', 'Bien': 'badge-bien', 'Très Bien': 'badge-tres-bien', 'Excellent': 'badge-tres-bien' };
+
+    loadMemoiresRecents(3).then(memoires => {
+      const grid = document.getElementById('memoires-recents-grid');
+      if (!grid) return;
+
+      if (memoires.length === 0) {
+        grid.innerHTML = '<div class="card" style="grid-column:1/-1;text-align:center;padding:48px;color:var(--text-muted);">Aucun mémoire soutenu pour le moment.</div>';
+        return;
+      }
+
+      grid.innerHTML = memoires.map(m => `
+        <div class="card card-memoire animate-fade-in-up">
+          <div style="display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
+            <span class="badge badge-soutenu">✓ Soutenu</span>
+            ${m.mention ? `<span class="badge ${MENTIONS[m.mention] || 'badge-en-cours'}">${escapeHtml(m.mention)}</span>` : ''}
+            ${m.thematique ? `<span class="badge badge-section">${escapeHtml(m.thematique)}</span>` : ''}
+          </div>
+          <div class="memoire-title">${escapeHtml(m.titre || 'Sans titre')}</div>
+          <div class="memoire-meta">
+            <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> ${escapeHtml(m.etudiant || '—')}</span>
+            &nbsp;·&nbsp;
+            <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> ${escapeHtml(m.anneeAcademique || '—')}</span>
+            ${m.dateSoutenance ? `&nbsp;·&nbsp;<span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> ${formatDate(m.dateSoutenance)}</span>` : ''}
+          </div>
+          <div class="memoire-tags">
+            ${(m.motsCles || []).slice(0, 3).map(k => `<span class="tag">${escapeHtml(k)}</span>`).join('')}
+          </div>
+        </div>
+      `).join('');
+    });
+  </script>
+
+</body>
+</html>

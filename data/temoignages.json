@@ -1,0 +1,26 @@
+[
+  {
+    "id": "t1",
+    "auteur": "Mamadou Diallo",
+    "role": "Diplômé — Promo 2024",
+    "promotion": "2023–2024",
+    "texte": "Le Master Génie Logiciel m'a donné les outils techniques et méthodologiques pour concevoir des systèmes complexes. L'encadrement de qualité et les projets concrets m'ont permis d'intégrer rapidement le marché du travail.",
+    "visible": true
+  },
+  {
+    "id": "t2",
+    "auteur": "Aïssatou Baldé",
+    "role": "Ingénieure logicielle — Promo 2024",
+    "promotion": "2023–2024",
+    "texte": "La formation est exigeante mais très enrichissante. J'ai particulièrement apprécié les modules sur les architectures distribuées et le DevOps. Mon mémoire sur les microservices m'a ouvert les portes du secteur bancaire.",
+    "visible": true
+  },
+  {
+    "id": "t3",
+    "auteur": "Boubacar Kouyaté",
+    "role": "Doctorant en Informatique — Promo 2023",
+    "promotion": "2022–2023",
+    "texte": "Grâce à ce Master, j'ai développé une véritable rigueur scientifique. Mon travail sur la détection d'anomalies par IA m'a conduit à poursuivre en doctorat. Je recommande vivement ce programme à tous ceux qui veulent aller loin.",
+    "visible": true
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls \"C:\\\\Users\\\\HP\\\\Desktop\\\\PORTFOLIO_MGL\\\\data\"\" && ls \"C:UsersHPDesktopPORTFOLIO_MGLassetsjsstatic-data.js\" 2>&1 && ls \"C:UsersHPDesktopPORTFOLIO_MGL.nojekyll \")",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}

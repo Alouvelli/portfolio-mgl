@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administration — Master GL Portfolio</title>
+
+  <link rel="stylesheet" href="../assets/css/variables.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body>
+
+  <!-- Bandeau mode statique -->
+  <div style="background:#d97706;color:white;text-align:center;padding:10px 16px;font-size:0.85rem;font-family:sans-serif;position:relative;z-index:999;">
+    <strong>Mode statique actif</strong> — L'espace admin nécessite la configuration Firebase.
+    En attendant, modifiez le contenu via les fichiers <code style="background:rgba(0,0,0,0.2);padding:1px 5px;border-radius:3px;">data/*.json</code>.
+  </div>
+
+  <div class="login-page">
+    <div class="login-card">
+
+      <div class="login-header">
+        <div class="login-icon"><svg style="width:48px;height:48px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <h1>Espace Administration</h1>
+        <p>Connectez-vous pour gérer le contenu du portfolio Master Génie Logiciel</p>
+      </div>
+
+      <div class="login-error" id="login-error" role="alert"></div>
+
+      <form id="login-form" novalidate>
+        <div class="form-group">
+          <label class="form-label required" for="email">Adresse email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-control"
+            placeholder="admin@master-gl.edu"
+            autocomplete="email"
+            required
+          >
+        </div>
+        <div class="form-group">
+          <label class="form-label required" for="password">Mot de passe</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="form-control"
+            placeholder="••••••••"
+            autocomplete="current-password"
+            required
+          >
+        </div>
+        <button type="submit" id="login-btn" class="btn btn-primary" style="width:100%;margin-top:8px;padding:13px;">
+          Se connecter
+        </button>
+      </form>
+
+      <div style="text-align:center;margin-top:24px;padding-top:20px;border-top:1px solid var(--border-light);">
+        <a href="../index.html" style="font-size:var(--text-sm);color:var(--text-muted);">
+          ← Retour au portfolio public
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="module">
+    import { initLoginPage } from '../assets/js/auth.js';
+    initLoginPage();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "p1",
+    "url": "https://placehold.co/800x600/1a3d6e/ffffff?text=Soutenance+Juillet+2024",
+    "legende": "Cérémonies de soutenance des mémoires — Promotion 2024",
+    "ordre": 1
+  },
+  {
+    "id": "p2",
+    "url": "https://placehold.co/800x600/238c5f/ffffff?text=Remise+des+Diplômes+2024",
+    "legende": "Remise officielle des diplômes — Promotion 2023–2024",
+    "ordre": 2
+  },
+  {
+    "id": "p3",
+    "url": "https://placehold.co/800x600/112a4a/ffffff?text=Présentation+Orale+2023",
+    "legende": "Présentation orale devant le jury — Promotion 2023",
+    "ordre": 3
+  },
+  {
+    "id": "p4",
+    "url": "https://placehold.co/800x600/d4920d/ffffff?text=Atelier+Recherche+2024",
+    "legende": "Atelier de méthodologie de recherche — Janvier 2024",
+    "ordre": 4
+  }
+]

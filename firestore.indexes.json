@@ -1,0 +1,37 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "memoires",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "statut",           "order": "ASCENDING" },
+        { "fieldPath": "createdAt",        "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "memoires",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "statut",           "order": "ASCENDING" },
+        { "fieldPath": "dateSoutenance",   "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "memoires",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "anneeAcademique",  "order": "ASCENDING" },
+        { "fieldPath": "createdAt",        "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "temoignages",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "visible",          "order": "ASCENDING" },
+        { "fieldPath": "createdAt",        "order": "DESCENDING" }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

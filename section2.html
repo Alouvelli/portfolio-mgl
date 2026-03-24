@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Processus de recherche et de stage — Chronogramme, fiches, grilles d'évaluation">
+  <title>Section 2 — Recherche & Stage | Master GL</title>
+
+  <!-- Google Fonts (preconnect) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/sections.css">
+</head>
+<body>
+
+  <div class="reading-progress" id="reading-progress"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="header-logo">
+        <div class="logo-icon">GL</div>
+        <div class="logo-text">
+          <span class="logo-main">Master Génie Logiciel</span>
+          <span class="logo-sub">Master GL</span>
+        </div>
+      </a>
+      <nav class="header-nav">
+        <a href="index.html"    class="nav-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Accueil</a>
+        <a href="section1.html" class="nav-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Cadre Pédagogique</a>
+        <a href="section2.html" class="nav-link active"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.31L5.5 18A2 2 0 0 0 7.36 21h9.28a2 2 0 0 0 1.86-2.69L14 9.31V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg> Recherche &amp; Stage</a>
+        <a href="section3.html" class="nav-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="22" height="4" x="1" y="3" rx="1"/><path d="M10 12h4"/><rect x="1" y="7" width="22" height="14" rx="1"/></svg> Archives</a>
+      </nav>
+      <div class="header-actions">
+        <a href="admin/index.html" class="btn btn-admin no-print"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg> Admin</a>
+        <button class="btn-hamburger no-print" id="hamburger-btn" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-menu no-print" id="mobile-menu">
+    <a href="index.html"    class="nav-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Accueil</a>
+    <a href="section1.html" class="nav-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Cadre Pédagogique</a>
+    <a href="section2.html" class="nav-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.31L5.5 18A2 2 0 0 0 7.36 21h9.28a2 2 0 0 0 1.86-2.69L14 9.31V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg> Recherche &amp; Stage</a>
+    <a href="section3.html" class="nav-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="22" height="4" x="1" y="3" rx="1"/><path d="M10 12h4"/><rect x="1" y="7" width="22" height="14" rx="1"/></svg> Archives</a>
+  </nav>
+
+  <div class="section-page-hero">
+    <div class="container" style="position:relative;">
+      <div class="section-hero-bg-num" aria-hidden="true">02</div>
+      <div class="section-num-badge" style="position:relative;z-index:1;"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.31L5.5 18A2 2 0 0 0 7.36 21h9.28a2 2 0 0 0 1.86-2.69L14 9.31V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg> Section 2</div>
+      <h1 style="position:relative;z-index:1;">Processus de Recherche et de Stage</h1>
+      <p style="position:relative;z-index:1;">Documents officiels encadrant la gestion des mémoires : calendrier, guides, fiches de suivi et grilles d'évaluation.</p>
+    </div>
+  </div>
+
+  <nav class="nav-sections no-print" aria-label="Navigation de section">
+    <div class="container nav-sections-inner">
+      <a href="#chronogramme"    class="nav-section-link"><span class="section-num">1</span> Chronogramme</a>
+      <a href="#documents"       class="nav-section-link"><span class="section-num">2</span> Documents</a>
+      <a href="#soutenance"      class="nav-section-link"><span class="section-num">3</span> Soutenance</a>
+      <a href="#grilles"         class="nav-section-link"><span class="section-num">4</span> Grilles</a>
+    </div>
+  </nav>
+
+  <main class="page-main with-section-nav">
+    <div class="container">
+      <div class="layout-with-sidebar" style="padding: 40px 0 80px;">
+
+        <div>
+
+          <!-- 1. CHRONOGRAMME -->
+          <section class="section-block" id="chronogramme" style="padding-top:40px;">
+            <div class="section-header">
+              <div class="section-tag"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Calendrier</div>
+              <h2>Calendrier de gestion des mémoires</h2>
+              <div class="section-divider"></div>
+              <p>Chronogramme annuel des échéances pour la gestion des mémoires de fin d'études.</p>
+            </div>
+            <div id="chronogramme-content">
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-dot"><div class="spinner" style="width:20px;height:20px;border-width:2px;"></div></div>
+                  <div class="timeline-content"><div class="skeleton skeleton-title"></div><div class="skeleton skeleton-text short"></div></div>
+                </div>
+              </div>
+            </div>
+            <div id="chronogramme-pdf" style="margin-top:20px;"></div>
+          </section>
+
+          <!-- 2. DOCUMENTS OFFICIELS -->
+          <section class="section-block alt-bg" id="documents">
+            <div class="section-header">
+              <div class="section-tag"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Documents</div>
+              <h2>Documents officiels</h2>
+              <div class="section-divider"></div>
+              <p>Formulaires, guides et modèles à télécharger pour la préparation du mémoire.</p>
+            </div>
+            <div class="documents-grid" id="documents-content">
+              <div class="card"><div class="skeleton skeleton-title"></div><div class="skeleton skeleton-text"></div></div>
+              <div class="card"><div class="skeleton skeleton-title"></div><div class="skeleton skeleton-text"></div></div>
+              <div class="card"><div class="skeleton skeleton-title"></div><div class="skeleton skeleton-text"></div></div>
+              <div class="card"><div class="skeleton skeleton-title"></div><div class="skeleton skeleton-text"></div></div>
+            </div>
+          </section>
+
+          <!-- 3. MODALITÉS DE SOUTENANCE -->
+          <section class="section-block" id="soutenance">
+            <div class="section-header">
+              <div class="section-tag"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="9" width="18" height="12"/><path d="M3 9L12 3l9 6"/><line x1="9" y1="21" x2="9" y2="9"/><line x1="15" y1="21" x2="15" y2="9"/></svg> Soutenance</div>
+              <h2>Modalités de soutenance</h2>
+              <div class="section-divider"></div>
+            </div>
+            <div id="soutenance-content">
+              <div class="skeleton skeleton-title"></div>
+              <div class="skeleton skeleton-text"></div>
+            </div>
+          </section>
+
+          <!-- 4. GRILLES D'ÉVALUATION -->
+          <section class="section-block alt-bg" id="grilles">
+            <div class="section-header">
+              <div class="section-tag"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg> Évaluation</div>
+              <h2>Grilles d'évaluation</h2>
+              <div class="section-divider"></div>
+              <p>Critères détaillés de notation lors de la soutenance du mémoire de fin d'études.</p>
+            </div>
+            <div id="grilles-content">
+              <div class="skeleton skeleton-title"></div>
+              <div class="skeleton skeleton-text"></div>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="layout-sidebar">
+          <div class="sidebar-card">
+            <h3>Dans cette section</h3>
+            <a href="#chronogramme"  class="sidebar-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Chronogramme</a>
+            <a href="#documents"     class="sidebar-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Documents</a>
+            <a href="#soutenance"    class="sidebar-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="9" width="18" height="12"/><path d="M3 9L12 3l9 6"/><line x1="9" y1="21" x2="9" y2="9"/><line x1="15" y1="21" x2="15" y2="9"/></svg> Soutenance</a>
+            <a href="#grilles"       class="sidebar-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg> Grilles</a>
+          </div>
+          <div class="sidebar-card">
+            <h3>Autres sections</h3>
+            <a href="section1.html" class="sidebar-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Cadre Pédagogique</a>
+            <a href="section3.html" class="sidebar-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="22" height="4" x="1" y="3" rx="1"/><path d="M10 12h4"/><rect x="1" y="7" width="22" height="14" rx="1"/></svg> Archives</a>
+          </div>
+          <div class="sidebar-card no-print">
+            <h3>Actions</h3>
+            <button onclick="window.print()" class="btn btn-ghost btn-sm" style="width:100%;margin-bottom:8px;"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg> Imprimer</button>
+            <a href="section3.html" class="btn btn-primary btn-sm" style="width:100%;text-align:center;">Suite →</a>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="header-logo" style="margin-bottom:12px;">
+            <div class="logo-icon">GL</div>
+            <div class="logo-text">
+              <span class="logo-main">Master Génie Logiciel</span>
+              <span class="logo-sub">Master GL</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="section1.html">Cadre Pédagogique</a></li>
+            <li><a href="section2.html">Recherche & Stage</a></li>
+            <li><a href="section3.html">Archives</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Administration</h4>
+          <ul><li><a href="admin/index.html">Espace admin</a></li></ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="current-year"></span> — Master Génie Logiciel.</span>
+        <span class="footer-badge"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Programme Officiel</span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/js/navigation.js"></script>
+  <script type="module" src="assets/js/section2.js"></script>
+  <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>
