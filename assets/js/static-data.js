@@ -18,9 +18,15 @@ async function fetchJSON(path) {
   }
 }
 
-// Les section JS ont des fallbacks intégrés quand null est retourné.
-export async function loadSection1() { return null; }
-export async function loadSection2() { return null; }
+export async function loadSection1(docId) {
+  const data = await fetchJSON('./data/section1.json');
+  return data ? (data[docId] ?? null) : null;
+}
+
+export async function loadSection2(docId) {
+  const data = await fetchJSON('./data/section2.json');
+  return data ? (data[docId] ?? null) : null;
+}
 
 export async function loadSiteConfig() {
   return fetchJSON('./data/config.json');

@@ -1,4 +1,12 @@
 {
   "nomUniversite": "ISI — Institut Supérieur d'Informatique",
-  "anneeAccreditation": "2024–2026"
+  "groupeISI": "Groupe ISI",
+  "adresse": "KM1 Avenue Cheikh Anta Diop, Dakar, Sénégal",
+  "telephone": "+221 33 822 19 81",
+  "email": "contact@groupeisi.com",
+  "siteWeb": "www.groupeisi.com",
+  "anneeCreation": 1994,
+  "directeur": "M. Abdou SAMBE",
+  "anneeAccreditation": "2024–2026",
+  "mission": "Former des professionnels du numérique compétitifs sur le marché africain et international"
 }

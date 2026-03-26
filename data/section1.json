@@ -1,0 +1,163 @@
+{
+  "presentation": {
+    "mission": "Former des étudiants disposant de connaissances théoriques et de compétences en ingénierie logicielle, capables de concevoir et de développer des applications informatiques de qualité.",
+    "texteIntro": "Le Master Génie Logiciel (GL) est un programme de formation de niveau Bac+5 proposé par l'Institut Supérieur d'Informatique (ISI). Il forme des ingénieurs spécialisés dans la conception, le développement et la gestion de systèmes logiciels complexes, aptes à répondre aux exigences techniques et managériales des entreprises africaines et internationales.",
+    "vision": "Devenir la référence de l'ingénierie logicielle en Afrique de l'Ouest en formant des diplômés immédiatement opérationnels, maîtrisant les technologies les plus récentes et porteurs des valeurs d'éthique, de qualité et d'innovation."
+  },
+
+  "objectifs": {
+    "liste": [
+      { "icone": "<svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M22 10v6M2 10l10-5 10 5-10 5z\"/><path d=\"M6 12v5c3 3 9 3 12 0v-5\"/></svg>", "texte": "Former des ingénieurs logiciel maîtrisant l'intégralité du cycle de développement, de l'analyse des besoins à la mise en production." },
+      { "icone": "<svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><polygon points=\"12 2 2 7 12 12 22 7 12 2\"/><polyline points=\"2 17 12 22 22 17\"/><polyline points=\"2 12 12 17 22 12\"/></svg>", "texte": "Développer des compétences avancées en conception d'architectures logicielles modernes (microservices, SOA, Cloud-native)." },
+      { "icone": "<svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"/></svg>", "texte": "Intégrer les principes de Clean Code, Security by Design et de qualité logicielle dans chaque étape du développement." },
+      { "icone": "<svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M19.07 4.93l-1.41 1.41M6.34 17.66l-1.41 1.41M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M12 2v2M12 20v2\"/></svg>", "texte": "Préparer à l'adoption des pratiques DevOps, CI/CD et à l'administration d'infrastructures Cloud (AWS, Azure, GCP)." },
+      { "icone": "<svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\"/><circle cx=\"9\" cy=\"7\" r=\"4\"/><path d=\"M23 21v-2a4 4 0 0 0-3-3.87\"/><path d=\"M16 3.13a4 4 0 0 1 0 7.75\"/></svg>", "texte": "Renforcer les aptitudes à la gestion de projets, aux méthodes agiles et au travail collaboratif en équipe pluridisciplinaire." },
+      { "icone": "<svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><line x1=\"21\" y1=\"21\" x2=\"16.65\" y2=\"16.65\"/></svg>", "texte": "Former à la rédaction scientifique et à la conduite de travaux de recherche appliquée aboutissant à un mémoire de fin d'études." }
+    ]
+  },
+
+  "competences": {
+    "domaines": [
+      {
+        "titre": "Analyse & Conception",
+        "competences": [
+          "Analyser les besoins et rédiger les spécifications fonctionnelles et techniques",
+          "Concevoir des architectures logicielles adaptées aux contraintes métier",
+          "Modéliser les systèmes avec UML et les méthodes de génie logiciel"
+        ]
+      },
+      {
+        "titre": "Développement & Données",
+        "competences": [
+          "Développer des applications en adoptant les principes du Clean Code et Security by Design",
+          "Concevoir et gérer des bases de données relationnelles (SQL) et non relationnelles (NoSQL)",
+          "Développer des interfaces web et mobiles (Angular, React, Flutter)"
+        ]
+      },
+      {
+        "titre": "DevOps & Cloud",
+        "competences": [
+          "Mettre en place des pipelines CI/CD et automatiser les tests logiciels",
+          "Déployer et administrer des infrastructures Cloud (AWS, Azure, GCP)",
+          "Orchestrer des conteneurs avec Docker et Kubernetes"
+        ]
+      },
+      {
+        "titre": "Qualité & Maintenance",
+        "competences": [
+          "Assurer la qualité logicielle et la sécurité des systèmes d'information",
+          "Maintenir les systèmes en condition opérationnelle (MCO) et gérer les incidents",
+          "Appliquer les normes et référentiels qualité (ISO, CMMI, ITIL)"
+        ]
+      }
+    ]
+  },
+
+  "debouches": {
+    "secteurs": [
+      {
+        "icone": "<svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><polyline points=\"16 18 22 12 16 6\"/><polyline points=\"8 6 2 12 8 18\"/></svg>",
+        "titre": "Ingénieur en Conception et Développement Logiciel",
+        "description": "Conception, développement et maintenance d'applications métier dans les ESN, éditeurs de logiciels et directions informatiques.",
+        "exemples": ["Développeur Full-Stack", "Ingénieur Backend", "Développeur Mobile"]
+      },
+      {
+        "icone": "<svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><polygon points=\"12 2 2 7 12 12 22 7 12 2\"/><polyline points=\"2 17 12 22 22 17\"/><polyline points=\"2 12 12 17 22 12\"/></svg>",
+        "titre": "Architecte d'Applications",
+        "description": "Définition des choix techniques et architecturaux des systèmes logiciels complexes dans les grandes organisations.",
+        "exemples": ["Architecte logiciel", "Technical Lead", "Solution Architect"]
+      },
+      {
+        "icone": "<svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71\"/><path d=\"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71\"/></svg>",
+        "titre": "Ingénieur Intégrateur",
+        "description": "Intégration de composants logiciels et de systèmes tiers au sein des plateformes d'entreprise.",
+        "exemples": ["Intégrateur SI", "Consultant ERP", "Ingénieur middleware"]
+      },
+      {
+        "icone": "<svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\"/><rect x=\"8\" y=\"2\" width=\"8\" height=\"4\" rx=\"1\"/></svg>",
+        "titre": "Chef de Projet Informatique Junior",
+        "description": "Pilotage de projets de développement logiciel en méthodes agiles ou traditionnelles.",
+        "exemples": ["Chef de projet junior", "Scrum Master", "Product Owner"]
+      },
+      {
+        "icone": "<svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\"/><path d=\"M21 12c0 1.66-4 3-9 3s-9-1.34-9-3\"/><path d=\"M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5\"/></svg>",
+        "titre": "Administrateur de Bases de Données",
+        "description": "Administration, optimisation et sécurisation des bases de données relationnelles et NoSQL.",
+        "exemples": ["DBA Oracle/MySQL", "Admin MongoDB", "Data Engineer"]
+      },
+      {
+        "icone": "<svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z\"/></svg>",
+        "titre": "Ingénieur Cloud",
+        "description": "Déploiement, configuration et administration d'infrastructures Cloud publiques et hybrides.",
+        "exemples": ["Cloud Engineer", "AWS Solutions Architect", "Azure Administrator"]
+      },
+      {
+        "icone": "<svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z\"/></svg>",
+        "titre": "Ingénieur DevOps",
+        "description": "Mise en place et gestion des pipelines CI/CD, automatisation des déploiements et monitoring.",
+        "exemples": ["DevOps Engineer", "SRE", "Platform Engineer"]
+      },
+      {
+        "icone": "<svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M22 11.08V12a10 10 0 1 1-5.93-9.14\"/><polyline points=\"22 4 12 14.01 9 11.01\"/></svg>",
+        "titre": "Ingénieur en Qualité Logicielle",
+        "description": "Assurance qualité, tests automatisés et amélioration continue des processus de développement.",
+        "exemples": ["QA Engineer", "Test Automation Engineer", "Quality Assurance Manager"]
+      },
+      {
+        "icone": "<svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z\"/><line x1=\"7\" y1=\"7\" x2=\"7.01\" y2=\"7\"/></svg>",
+        "titre": "Consultant en Systèmes d'Information",
+        "description": "Conseil et accompagnement des organisations dans leurs projets de transformation numérique.",
+        "exemples": ["Consultant IT", "Business Analyst", "MOE / AMOA"]
+      },
+      {
+        "icone": "<svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><polyline points=\"23 6 13.5 15.5 8.5 10.5 1 18\"/><polyline points=\"17 6 23 6 23 12\"/></svg>",
+        "titre": "Entrepreneur Numérique",
+        "description": "Création de startups technologiques ou d'entreprises de services du numérique.",
+        "exemples": ["Co-fondateur tech", "CTO de startup", "Porteur de projet numérique"]
+      }
+    ]
+  },
+
+  "organisation_enseignements": {
+    "_source": "Maquette pédagogique optimisée (LMD) — MASTER GÉNIE LOGICIEL — ISI 2025-2026",
+    "semestres": [
+      {
+        "numero": 1,
+        "intitule": "Semestre 1 — Master 1 GL (30 crédits ECTS)",
+        "ues": [
+          { "codeUE": "1DAP2101",  "intituleUE": "[DAP] Développement Frontend (React JS, Angular, Vue JS)",                                           "credits": 3, "volumeHoraire": 60,  "enseignant": "—" },
+          { "codeUE": "2DAP2101",  "intituleUE": "[DAP] Développement web Java (JEE / Spring Boot)",                                                   "credits": 3, "volumeHoraire": 60,  "enseignant": "—" },
+          { "codeUE": "3DAP2101",  "intituleUE": "[DAP] .NET / Blazor",                                                                                 "credits": 3, "volumeHoraire": 60,  "enseignant": "—" },
+          { "codeUE": "1SIBD2102", "intituleUE": "[SIBD] Bases de données avancées (PostgreSQL)",                                                       "credits": 3, "volumeHoraire": 70,  "enseignant": "—" },
+          { "codeUE": "2SIBD2102", "intituleUE": "[SIBD] Modélisation avancée BD NoSQL (MongoDB)",                                                      "credits": 3, "volumeHoraire": 70,  "enseignant": "—" },
+          { "codeUE": "1RSY2103",  "intituleUE": "[RSY] Administration système Linux",                                                                  "credits": 3, "volumeHoraire": 60,  "enseignant": "—" },
+          { "codeUE": "2RSY2103",  "intituleUE": "[RSY] Cloud Computing (IaaS / SaaS / PaaS)",                                                          "credits": 3, "volumeHoraire": 60,  "enseignant": "—" },
+          { "codeUE": "1CGE2104",  "intituleUE": "[CGE] Anglais Technique (TOEIC)",                                                                     "credits": 2, "volumeHoraire": 40,  "enseignant": "—" },
+          { "codeUE": "2CGE2104",  "intituleUE": "[CGE] Communication professionnelle",                                                                 "credits": 3, "volumeHoraire": 60,  "enseignant": "—" },
+          { "codeUE": "3CGE2104",  "intituleUE": "[CGE] Décisions financières appliquées à l'IT (budget projet, ROI, dette technique, coût cloud)",     "credits": 2, "volumeHoraire": 60,  "enseignant": "—" }
+        ]
+      },
+      {
+        "numero": 2,
+        "intitule": "Semestre 2 — Master 1 GL (à compléter)",
+        "ues": [
+          { "codeUE": "—", "intituleUE": "Données en attente — Maquette M1 S2 non encore transmise", "credits": 0, "volumeHoraire": 0, "enseignant": "—" }
+        ]
+      },
+      {
+        "numero": 3,
+        "intitule": "Semestre 3 — Master 2 GL (à compléter)",
+        "ues": [
+          { "codeUE": "—", "intituleUE": "Données en attente — Maquette M2 S3 non encore transmise", "credits": 0, "volumeHoraire": 0, "enseignant": "—" }
+        ]
+      },
+      {
+        "numero": 4,
+        "intitule": "Semestre 4 — Mémoire de Fin d'Études",
+        "ues": [
+          { "codeUE": "M2GL-S4", "intituleUE": "Mémoire de Fin d'Études — Recherche, réalisation et soutenance devant jury", "credits": 30, "volumeHoraire": 600, "enseignant": "Encadreur désigné" }
+        ]
+      }
+    ]
+  }
+}

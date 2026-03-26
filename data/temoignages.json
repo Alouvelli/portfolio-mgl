@@ -1,26 +1,42 @@
 [
   {
     "id": "t1",
-    "auteur": "Mamadou Diallo",
-    "role": "Diplômé — Promo 2024",
-    "promotion": "2023–2024",
-    "texte": "Le Master Génie Logiciel m'a donné les outils techniques et méthodologiques pour concevoir des systèmes complexes. L'encadrement de qualité et les projets concrets m'ont permis d'intégrer rapidement le marché du travail.",
+    "auteur": "Estive MOUWENDJI",
+    "role": "Conseiller du Président de la République Gabonaise",
+    "promotion": "2014",
+    "texte": "ISI m'a donné les bases solides pour construire une carrière à la hauteur de mes ambitions. Ancien président de l'amicale des étudiants, j'ai compris dès ces années que la réussite se prépare par l'engagement, la rigueur et la vision. Aujourd'hui, conseiller au plus haut niveau de l'État gabonais, je mesure chaque jour la valeur de cette formation.",
     "visible": true
   },
   {
     "id": "t2",
-    "auteur": "Aïssatou Baldé",
-    "role": "Ingénieure logicielle — Promo 2024",
-    "promotion": "2023–2024",
-    "texte": "La formation est exigeante mais très enrichissante. J'ai particulièrement apprécié les modules sur les architectures distribuées et le DevOps. Mon mémoire sur les microservices m'a ouvert les portes du secteur bancaire.",
+    "auteur": "Nambinintsoa TAHINA",
+    "role": "Étudiant — L2 Cyber Sécurité",
+    "promotion": "En cours",
+    "texte": "J'ai choisi ISI pour la qualité de ses enseignants, jeunes et ambitieux, qui transmettent leur passion avec une énergie communicative. Venu de Madagascar, j'ai trouvé ici un environnement d'apprentissage stimulant, ouvert sur l'Afrique et le monde. Les excellents professeurs font toute la différence.",
     "visible": true
   },
   {
     "id": "t3",
-    "auteur": "Boubacar Kouyaté",
-    "role": "Doctorant en Informatique — Promo 2023",
-    "promotion": "2022–2023",
-    "texte": "Grâce à ce Master, j'ai développé une véritable rigueur scientifique. Mon travail sur la détection d'anomalies par IA m'a conduit à poursuivre en doctorat. Je recommande vivement ce programme à tous ceux qui veulent aller loin.",
+    "auteur": "KIMINHA MAPITA SAYA",
+    "role": "Président AMEA ISI Siège — Réseaux & Télécommunications",
+    "promotion": "En cours",
+    "texte": "En tant que président de l'Amicale des Étudiants Africains (AMEA ISI Siège), j'ai eu l'honneur d'organiser des journées culturelles réunissant six campus ISI. Cette expérience associative, combinée à une formation technique de haut niveau, forge des leaders complets. ISI prépare bien au-delà du diplôme.",
+    "visible": true
+  },
+  {
+    "id": "t4",
+    "auteur": "Khadijatou KANDJI",
+    "role": "Étudiante — L3 Finance-Comptabilité, Campus ISI SUPTECH",
+    "promotion": "En cours",
+    "texte": "Le campus ISI SUPTECH offre une formation en finance qui allie théorie rigoureuse et pratique professionnelle. Les intervenants du monde de l'entreprise apportent une vision concrète des métiers. Je recommande ISI à tout étudiant qui veut s'inscrire dans un parcours d'excellence orienté vers l'employabilité.",
+    "visible": true
+  },
+  {
+    "id": "t5",
+    "auteur": "Magueye NDOYE",
+    "role": "Étudiant — L2 Réseaux & Télécommunications",
+    "promotion": "En cours",
+    "texte": "Un champ avec une bonne qualité de sol ne peut produire que de bonnes récoltes. ISI est ce terrain fertile où l'on cultive l'excellence. Les infrastructures, l'encadrement et l'esprit de la communauté étudiante en font un établissement unique en Afrique de l'Ouest pour les métiers du numérique.",
     "visible": true
   }
 ]

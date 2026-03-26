@@ -1,0 +1,208 @@
+{
+  "chronogramme": {
+    "_source": "Calendrier officiel ISI — Gestion des Mémoires 2025-2026",
+    "etapes": [
+      {
+        "intitule": "Campagne d'information — présentation procédure mémoire, remise fiche de validation et canevas",
+        "dateDebut": "2026-01-20",
+        "dateFin": "2026-01-31",
+        "responsable": "Responsables pédagogiques, Chefs de département, Responsables de programme",
+        "statut": "done"
+      },
+      {
+        "intitule": "1ère période — Dépôt des sujets de mémoire",
+        "dateDebut": "2026-02-23",
+        "dateFin": "2026-02-28",
+        "responsable": "Enseignants / Étudiants",
+        "statut": "done"
+      },
+      {
+        "intitule": "1ère période — Validation des sujets de mémoire",
+        "dateDebut": "2026-03-05",
+        "dateFin": "2026-03-14",
+        "responsable": "Responsables pédagogiques / Enseignants",
+        "statut": "done"
+      },
+      {
+        "intitule": "2ème période — Dépôt des sujets de mémoire",
+        "dateDebut": "2026-03-09",
+        "dateFin": "2026-03-14",
+        "responsable": "Enseignants / Étudiants",
+        "statut": "done"
+      },
+      {
+        "intitule": "2ème période — Validation des sujets de mémoire",
+        "dateDebut": "2026-03-23",
+        "dateFin": "2026-04-04",
+        "responsable": "Responsables pédagogiques / Enseignants",
+        "statut": "active"
+      },
+      {
+        "intitule": "Session 1 — Dépôt des documents de soutenance (+ autorisation signée par le directeur de mémoire)",
+        "dateDebut": "2026-07-27",
+        "dateFin": "2026-07-31",
+        "responsable": "Enseignants / Étudiants",
+        "statut": "upcoming"
+      },
+      {
+        "intitule": "Session 1 — Soutenances des mémoires",
+        "dateDebut": "2026-08-20",
+        "dateFin": "2026-08-26",
+        "responsable": "Responsable pédagogique / Enseignants / Étudiants",
+        "statut": "upcoming"
+      },
+      {
+        "intitule": "Session 2 — Dépôt des documents de soutenance",
+        "dateDebut": "2026-11-30",
+        "dateFin": "2026-12-05",
+        "responsable": "Enseignants / Étudiants",
+        "statut": "upcoming"
+      },
+      {
+        "intitule": "Session 2 — Soutenances des mémoires",
+        "dateDebut": "2026-12-21",
+        "dateFin": "2026-12-30",
+        "responsable": "Direction des Études / Responsable pédagogique / Enseignants / Étudiants",
+        "statut": "upcoming"
+      }
+    ],
+    "fichierUrl": null
+  },
+
+  "guide_redaction": {
+    "fichierUrl": "./docs/canevas-memoire-master-gl-2024.pdf",
+    "version": "Janvier 2024",
+    "auteur": "Pr Samba NDIAYE — UCAD/FST, Président COS ISI",
+    "chapitres": [
+      {
+        "numero": 1,
+        "titre": "Introduction Générale",
+        "pages": "10–12",
+        "sections": ["Contexte général", "Problématique", "Objectifs (général et spécifiques)", "Intérêts (académique, scientifique, économique)"]
+      },
+      {
+        "numero": 2,
+        "titre": "Solutions Similaires",
+        "pages": "12–20",
+        "sections": ["Présentation d'au moins 10 solutions existantes", "Tableau comparatif des fonctionnalités", "Justification du choix de la solution proposée"]
+      },
+      {
+        "numero": 3,
+        "titre": "Analyse de l'Existant et Conception",
+        "pages": "20–35",
+        "sections": ["Analyse de l'existant", "Modélisation UML (diagrammes de cas d'usage, de classes, de séquences)", "Conception de l'IHM (maquettes)", "Architecture du système"]
+      },
+      {
+        "numero": 4,
+        "titre": "Réalisation",
+        "pages": "20–35",
+        "sections": [
+          "Environnement de développement (langages, frameworks)",
+          "Backend : SpringBoot / Laravel / Django / NodeJS",
+          "Frontend : Angular / React / Flutter",
+          "Déploiement : Docker, Cloud, Kubernetes",
+          "Captures d'écran et démonstration"
+        ]
+      },
+      {
+        "numero": 5,
+        "titre": "Conclusions et Perspectives",
+        "pages": "2–5",
+        "sections": ["Bilan des travaux réalisés", "Limites de la solution", "Perspectives d'amélioration et travaux futurs"]
+      }
+    ]
+  },
+
+  "fiche_depot": {
+    "fichierUrl": null
+  },
+
+  "fiche_suivi": {
+    "fichierViergeUrl": null,
+    "fichierExempleUrl": null
+  },
+
+  "modalites_soutenance": {
+    "noteTotal": 20,
+    "compositionJury": [
+      {
+        "role": "Président du jury",
+        "nombre": 1,
+        "criteres": "Enseignant-chercheur responsable de la conduite de la séance et de la délibération finale"
+      },
+      {
+        "role": "Membre du jury 1",
+        "nombre": 1,
+        "criteres": "Enseignant évaluateur — pose des questions sur le fond technique et scientifique du travail"
+      },
+      {
+        "role": "Membre du jury 2",
+        "nombre": 1,
+        "criteres": "Enseignant évaluateur — pose des questions sur la méthodologie, la rédaction et les perspectives"
+      }
+    ],
+    "protocole": [
+      {
+        "etape": "Présentation orale",
+        "duree": "15 min max",
+        "description": "L'étudiant présente ses travaux devant le jury avec un support numérique (PowerPoint) et, si possible, une démonstration fonctionnelle de l'application. Le temps est strictement limité à 15 minutes."
+      },
+      {
+        "etape": "Questions du jury",
+        "duree": "30 min",
+        "description": "Chaque membre du jury pose des questions sur le fond (choix techniques, méthodologie, résultats) et la forme (rédaction, sources bibliographiques)."
+      },
+      {
+        "etape": "Délibération à huis clos",
+        "duree": "15 min",
+        "description": "Le jury délibère en l'absence de l'étudiant et attribue la note finale sur 20 ainsi que la mention (Passable, Assez Bien, Bien, Très Bien)."
+      },
+      {
+        "etape": "Proclamation des résultats",
+        "duree": "5 min",
+        "description": "Le président du jury annonce la note sur 20 et la mention devant l'étudiant. Les félicitations peuvent être accordées à l'unanimité pour un travail exceptionnel."
+      }
+    ],
+    "fichierUrl": null
+  },
+
+  "grilles_evaluation": {
+    "grilles": [
+      {
+        "type": "technique",
+        "intitule": "Grille Technique — Qualité du Travail Réalisé",
+        "fichierUrl": null,
+        "criteres": [
+          { "critere": "Pertinence et originalité du sujet",        "ponderationMax": 4, "description": "Adéquation du sujet avec les enjeux actuels du génie logiciel" },
+          { "critere": "Maîtrise de la méthodologie",               "ponderationMax": 4, "description": "Rigueur dans la démarche scientifique et technique adoptée" },
+          { "critere": "Qualité de la solution technique",          "ponderationMax": 6, "description": "Architecture, code, tests, documentation technique" },
+          { "critere": "Validation et résultats",                   "ponderationMax": 4, "description": "Tests, benchmarks, mesures de performance ou d'utilité" },
+          { "critere": "Innovation et valeur ajoutée",              "ponderationMax": 2, "description": "Apport nouveau par rapport à l'état de l'art" }
+        ]
+      },
+      {
+        "type": "redactionnel",
+        "intitule": "Grille Rédactionnelle — Qualité du Mémoire Écrit",
+        "fichierUrl": null,
+        "criteres": [
+          { "critere": "Structure et organisation du mémoire",          "ponderationMax": 4, "description": "Respect du plan type (canevas ISI), enchaînement logique des parties" },
+          { "critere": "Qualité de la revue de littérature",            "ponderationMax": 4, "description": "Pertinence des références, analyse critique d'au moins 10 solutions existantes" },
+          { "critere": "Clarté et précision de l'expression écrite",    "ponderationMax": 4, "description": "Français correct, vocabulaire technique approprié, absence de fautes" },
+          { "critere": "Qualité des illustrations (figures, tableaux)", "ponderationMax": 4, "description": "Légendes, numérotation, lisibilité, UML conforme" },
+          { "critere": "Respect des normes bibliographiques",            "ponderationMax": 4, "description": "Citations correctes (APA, IEEE), bibliographie complète et normalisée" }
+        ]
+      },
+      {
+        "type": "oral",
+        "intitule": "Grille Orale — Présentation et Défense",
+        "fichierUrl": null,
+        "criteres": [
+          { "critere": "Maîtrise du sujet lors de la présentation", "ponderationMax": 5, "description": "Clarté de l'exposé, fluidité, respect du temps imparti (15 min max)" },
+          { "critere": "Qualité du support de présentation",        "ponderationMax": 3, "description": "Slides claires, visuels professionnels, démo fonctionnelle le cas échéant" },
+          { "critere": "Réponses aux questions du jury",            "ponderationMax": 8, "description": "Pertinence, profondeur, honnêteté intellectuelle face aux remarques du jury" },
+          { "critere": "Posture professionnelle",                   "ponderationMax": 4, "description": "Tenue vestimentaire, expression orale soignée, gestion du stress et des échanges" }
+        ]
+      }
+    ]
+  }
+}
