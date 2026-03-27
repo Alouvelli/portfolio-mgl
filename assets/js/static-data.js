@@ -8,9 +8,18 @@
  * section1.js, section2.js, section3.js : './static-data.js' → './firestore.js'
  */
 
+// Résout le chemin depuis la racine du site, quel que soit le sous-dossier de la page
+const _root = (() => {
+  const a = document.createElement('a');
+  a.href = '/';
+  return a.href.replace(/\/$/, ''); // ex: "" sur domaine racine, ou "/portfolio-mgl" sur github.io
+})();
+
 async function fetchJSON(path) {
+  // Convertit les chemins relatifs en chemins absolus depuis la racine
+  const url = path.startsWith('./') ? _root + path.slice(1) : path;
   try {
-    const res = await fetch(path);
+    const res = await fetch(url);
     if (!res.ok) return null;
     return res.json();
   } catch {
