@@ -211,7 +211,6 @@ function renderStats() {
 /* ===== TÉMOIGNAGES ===== */
 function renderTemoignages(liste) {
   const carousel = document.getElementById('temoignages-carousel');
-  const dots     = document.getElementById('temoignages-dots');
   if (!carousel) return;
 
   const items = (liste || []).filter(t => t.visible !== false);
@@ -221,37 +220,40 @@ function renderTemoignages(liste) {
     return;
   }
 
-  // Cards
-  carousel.innerHTML = items.map((t, i) => `
-    <div class="temoignage-card ${i === 0 ? 'active' : ''}" data-index="${i}" role="group" aria-label="Témoignage ${i + 1} sur ${items.length}">
-      <blockquote class="temoignage-texte">&ldquo;${escapeHtml(t.texte)}&rdquo;</blockquote>
-      <div class="temoignage-auteur">
-        <div class="auteur-avatar">${escapeHtml((t.auteur || '?')[0])}</div>
-        <div>
-          <div class="auteur-nom">${escapeHtml(t.auteur || '')}</div>
-          <div class="auteur-role">${escapeHtml(t.role || '')}${t.promotion ? ' · Promotion ' + escapeHtml(t.promotion) : ''}</div>
-        </div>
+  // Injecter la track + slides dans le carousel existant
+  const trackId = 'carousel-track';
+  let track = document.getElementById(trackId);
+  if (!track) {
+    carousel.innerHTML = `<div class="carousel-track" id="${trackId}"></div>`;
+    track = document.getElementById(trackId);
+  }
+
+  track.innerHTML = items.map((t, i) => `
+    <div class="carousel-slide" role="group" aria-label="Témoignage ${i + 1} sur ${items.length}">
+      <div class="temoignage-card">
+        <blockquote>${escapeHtml(t.texte)}</blockquote>
+        <div class="temoignage-author">${escapeHtml(t.auteur || '')}</div>
+        <div class="temoignage-role">${escapeHtml(t.role || '')}${t.promotion ? ' · Promotion ' + escapeHtml(t.promotion) : ''}</div>
       </div>
     </div>
   `).join('');
 
   // Dots
-  if (dots) {
-    dots.innerHTML = items.map((_, i) => `
-      <button class="carousel-dot ${i === 0 ? 'active' : ''}" data-index="${i}" aria-label="Témoignage ${i + 1}"></button>
+  const dotsEl = document.getElementById('carousel-dots');
+  if (dotsEl) {
+    dotsEl.innerHTML = items.map((_, i) => `
+      <button class="dot ${i === 0 ? 'active' : ''}" data-index="${i}" aria-label="Témoignage ${i + 1}"></button>
     `).join('');
   }
 
-  // Navigation automatique
+  // Navigation
   let current = 0;
-  const cards = carousel.querySelectorAll('.temoignage-card');
-  const dotBtns = dots ? dots.querySelectorAll('.carousel-dot') : [];
+  const dotBtns = dotsEl ? dotsEl.querySelectorAll('.dot') : [];
 
   function goTo(idx) {
-    cards[current]?.classList.remove('active');
     dotBtns[current]?.classList.remove('active');
     current = (idx + items.length) % items.length;
-    cards[current]?.classList.add('active');
+    track.style.transform = `translateX(-${current * 100}%)`;
     dotBtns[current]?.classList.add('active');
   }
 
