@@ -1,14 +1,13 @@
 /**
  * section3.js
  * Chargement et rendu de la Section 3 — Dynamiques & Archives
- * Mémoires avec filtres, galerie + lightbox, carousel témoignages
+ * Mémoires avec filtres et carousel témoignages
  */
 
 import {
   loadMemoires,
   loadAnneesAcademiques,
   loadThematiques,
-  loadGalerie,
   loadTemoignages,
   countDocuments,
 } from './static-data.js';
@@ -25,7 +24,6 @@ const ITEMS_PER_PAGE = 12;
 let allMemoires   = [];
 let filteredMemoires = [];
 let currentPage   = 1;
-let galleryItems  = [];
 
 document.addEventListener('DOMContentLoaded', () => {
   initSection3();
@@ -33,22 +31,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function initSection3() {
   // Chargement parallèle
-  const [memoires, annees, themes, galerie, temoignages] = await Promise.all([
+  const [memoires, annees, themes, temoignages] = await Promise.all([
     loadMemoires(),
     loadAnneesAcademiques(),
     loadThematiques(),
-    loadGalerie(),
     loadTemoignages(),
   ]);
 
   allMemoires = memoires;
   filteredMemoires = [...allMemoires];
-  galleryItems = galerie;
 
   populateFilters(annees, themes);
   renderMemoires();
   renderStats();
-  renderGalerie(galerie);
   renderTemoignages(temoignages);
   initFilters();
 }
@@ -212,125 +207,3 @@ function renderStats() {
   }, 0.1);
 }
 
-/* ===== GALERIE ===== */
-function renderGalerie(photos) {
-  const grid = document.getElementById('gallery-grid');
-  if (!grid) return;
-
-  if (!photos || photos.length === 0) {
-    grid.innerHTML = `
-      <div class="empty-state" style="grid-column:1/-1;">
-        <div class="empty-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:48px;height:48px;"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
-        <p>La galerie photos sera disponible prochainement.</p>
-      </div>`;
-    return;
-  }
-
-  grid.innerHTML = photos.map((photo, i) => `
-    <div class="gallery-item" data-index="${i}" role="button" tabindex="0" aria-label="Voir photo : ${escapeHtml(photo.legende || '')}">
-      <img src="${escapeHtml(photo.url)}" alt="${escapeHtml(photo.legende || 'Photo de soutenance')}" loading="lazy">
-      <div class="gallery-overlay">
-        <span>${escapeHtml(photo.legende || '')}</span>
-        <span>${escapeHtml(photo.annee || '')}</span>
-      </div>
-    </div>
-  `).join('');
-
-  // Lightbox
-  grid.querySelectorAll('.gallery-item').forEach((item, i) => {
-    item.addEventListener('click', () => openLightbox(i));
-    item.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') openLightbox(i); });
-  });
-}
-
-let currentLightboxIndex = 0;
-
-function openLightbox(index) {
-  currentLightboxIndex = index;
-  const photo   = galleryItems[index];
-  const overlay = document.getElementById('lightbox');
-  const img     = document.getElementById('lightbox-img');
-  const caption = document.getElementById('lightbox-caption');
-
-  if (!overlay || !img || !photo) return;
-
-  img.src           = photo.url;
-  img.alt           = photo.legende || 'Photo de soutenance';
-  caption.textContent = `${photo.legende || ''}${photo.evenement ? ' — ' + photo.evenement : ''}${photo.annee ? ' (' + photo.annee + ')' : ''}`;
-  overlay.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeLightbox() {
-  document.getElementById('lightbox')?.classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-function navigateLightbox(dir) {
-  currentLightboxIndex = (currentLightboxIndex + dir + galleryItems.length) % galleryItems.length;
-  openLightbox(currentLightboxIndex);
-}
-
-document.getElementById('lightbox-close')?.addEventListener('click', closeLightbox);
-document.getElementById('lightbox-prev')?.addEventListener('click', () => navigateLightbox(-1));
-document.getElementById('lightbox-next')?.addEventListener('click', () => navigateLightbox(1));
-document.getElementById('lightbox')?.addEventListener('click', (e) => {
-  if (e.target.id === 'lightbox') closeLightbox();
-});
-document.addEventListener('keydown', (e) => {
-  const lb = document.getElementById('lightbox');
-  if (!lb?.classList.contains('open')) return;
-  if (e.key === 'Escape')     closeLightbox();
-  if (e.key === 'ArrowLeft')  navigateLightbox(-1);
-  if (e.key === 'ArrowRight') navigateLightbox(1);
-});
-
-/* ===== TÉMOIGNAGES ===== */
-function renderTemoignages(temoignages) {
-  const track = document.getElementById('carousel-track');
-  const dots  = document.getElementById('carousel-dots');
-  if (!track) return;
-
-  const defaultTemoignages = [
-    {
-      nomEtudiant: 'Exemple — À renseigner',
-      promotionAnnee: '2022-2023',
-      posteActuel: 'Développeur Full-Stack — Entreprise X',
-      texte: 'Ce Master m\'a permis d\'acquérir une solide formation en génie logiciel et de m\'intégrer rapidement dans le monde professionnel avec des compétences concrètes et reconnues.',
-    }
-  ];
-
-  const items = temoignages.length > 0 ? temoignages : defaultTemoignages;
-  let current = 0;
-
-  track.innerHTML = items.map(t => `
-    <div class="carousel-slide">
-      <div class="temoignage-card">
-        <blockquote>${escapeHtml(t.texte)}</blockquote>
-        <div class="temoignage-author">${escapeHtml(t.nomEtudiant)}</div>
-        <div class="temoignage-role">${escapeHtml(t.posteActuel || '')} · Promotion ${escapeHtml(t.promotionAnnee || '')}</div>
-      </div>
-    </div>
-  `).join('');
-
-  if (dots) {
-    dots.innerHTML = items.map((_, i) =>
-      `<span class="dot ${i === 0 ? 'active' : ''}" data-index="${i}"></span>`
-    ).join('');
-    dots.querySelectorAll('.dot').forEach(dot => {
-      dot.addEventListener('click', () => goTo(parseInt(dot.dataset.index)));
-    });
-  }
-
-  function goTo(index) {
-    current = index;
-    track.style.transform = `translateX(-${current * 100}%)`;
-    dots?.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
-  }
-
-  document.getElementById('carousel-prev')?.addEventListener('click', () => goTo((current - 1 + items.length) % items.length));
-  document.getElementById('carousel-next')?.addEventListener('click', () => goTo((current + 1) % items.length));
-
-  // Auto-avance
-  if (items.length > 1) setInterval(() => goTo((current + 1) % items.length), 6000);
-}
