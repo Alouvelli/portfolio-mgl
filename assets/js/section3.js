@@ -207,3 +207,61 @@ function renderStats() {
   }, 0.1);
 }
 
+
+/* ===== TÉMOIGNAGES ===== */
+function renderTemoignages(liste) {
+  const carousel = document.getElementById('temoignages-carousel');
+  const dots     = document.getElementById('temoignages-dots');
+  if (!carousel) return;
+
+  const items = (liste || []).filter(t => t.visible !== false);
+
+  if (!items.length) {
+    carousel.innerHTML = '<p style="text-align:center;color:var(--text-muted);">Aucun témoignage disponible.</p>';
+    return;
+  }
+
+  // Cards
+  carousel.innerHTML = items.map((t, i) => `
+    <div class="temoignage-card ${i === 0 ? 'active' : ''}" data-index="${i}" role="group" aria-label="Témoignage ${i + 1} sur ${items.length}">
+      <blockquote class="temoignage-texte">&ldquo;${escapeHtml(t.texte)}&rdquo;</blockquote>
+      <div class="temoignage-auteur">
+        <div class="auteur-avatar">${escapeHtml((t.auteur || '?')[0])}</div>
+        <div>
+          <div class="auteur-nom">${escapeHtml(t.auteur || '')}</div>
+          <div class="auteur-role">${escapeHtml(t.role || '')}${t.promotion ? ' · Promotion ' + escapeHtml(t.promotion) : ''}</div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  // Dots
+  if (dots) {
+    dots.innerHTML = items.map((_, i) => `
+      <button class="carousel-dot ${i === 0 ? 'active' : ''}" data-index="${i}" aria-label="Témoignage ${i + 1}"></button>
+    `).join('');
+  }
+
+  // Navigation automatique
+  let current = 0;
+  const cards = carousel.querySelectorAll('.temoignage-card');
+  const dotBtns = dots ? dots.querySelectorAll('.carousel-dot') : [];
+
+  function goTo(idx) {
+    cards[current]?.classList.remove('active');
+    dotBtns[current]?.classList.remove('active');
+    current = (idx + items.length) % items.length;
+    cards[current]?.classList.add('active');
+    dotBtns[current]?.classList.add('active');
+  }
+
+  dotBtns.forEach(btn => btn.addEventListener('click', () => goTo(parseInt(btn.dataset.index))));
+
+  const prev = document.getElementById('carousel-prev');
+  const next = document.getElementById('carousel-next');
+  prev?.addEventListener('click', () => goTo(current - 1));
+  next?.addEventListener('click', () => goTo(current + 1));
+
+  // Auto-défilement toutes les 6 secondes
+  setInterval(() => goTo(current + 1), 6000);
+}
