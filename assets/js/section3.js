@@ -42,6 +42,18 @@ async function initSection3() {
   filteredMemoires = [...allMemoires];
 
   populateFilters(annees, themes);
+
+  // Pré-filtre via paramètre URL (ex: ?annee=2024–2025)
+  const params = new URLSearchParams(window.location.search);
+  const anneeParam = params.get('annee');
+  if (anneeParam) {
+    const selAnnee = document.getElementById('filter-annee');
+    if (selAnnee && selAnnee.querySelector(`option[value="${anneeParam}"]`)) {
+      selAnnee.value = anneeParam;
+      filteredMemoires = allMemoires.filter(m => m.anneeAcademique === anneeParam);
+    }
+  }
+
   renderMemoires();
   renderStats();
   renderTemoignages(temoignages);
@@ -139,7 +151,7 @@ function renderMemoires() {
           ${m.mention ? `<span class="badge ${MENTIONS_BADGE[m.mention] || 'badge-en-cours'}">${escapeHtml(m.mention)}</span>` : ''}
           ${m.thematique ? `<span class="badge badge-section">${escapeHtml(m.thematique)}</span>` : ''}
         </div>
-        <div class="memoire-title">${escapeHtml(m.titre || 'Sans titre')}</div>
+        <div class="memoire-title" title="${escapeHtml(m.titre || '')}">${escapeHtml(m.titre || 'Sans titre')}</div>
         <div class="memoire-meta" style="margin-top:8px;">
           <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> ${escapeHtml(m.etudiant || '—')}</span>
           &nbsp;·&nbsp;

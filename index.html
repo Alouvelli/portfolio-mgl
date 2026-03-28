@@ -195,7 +195,7 @@
         </div>
 
         <div style="text-align:center; margin-top:32px;">
-          <a href="./archives/" class="btn btn-secondary">Voir tous les mémoires →</a>
+          <a href="./archives/?annee=2024%E2%80%932025" class="btn btn-secondary">Voir tous les mémoires →</a>
         </div>
       </div>
     </section>
@@ -295,7 +295,7 @@
             ${m.mention ? `<span class="badge ${MENTIONS[m.mention] || 'badge-en-cours'}">${escapeHtml(m.mention)}</span>` : ''}
             ${m.thematique ? `<span class="badge badge-section">${escapeHtml(m.thematique)}</span>` : ''}
           </div>
-          <div class="memoire-title">${escapeHtml(m.titre || 'Sans titre')}</div>
+          <div class="memoire-title" title="${escapeHtml(m.titre || '')}">${escapeHtml(m.titre || 'Sans titre')}</div>
           <div class="memoire-meta">
             <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> ${escapeHtml(m.etudiant || '—')}</span>
             &nbsp;·&nbsp;
