@@ -42,18 +42,6 @@ async function initSection3() {
   filteredMemoires = [...allMemoires];
 
   populateFilters(annees, themes);
-
-  // Pré-filtre via paramètre URL (ex: ?annee=2024–2025)
-  const params = new URLSearchParams(window.location.search);
-  const anneeParam = params.get('annee');
-  if (anneeParam) {
-    const selAnnee = document.getElementById('filter-annee');
-    if (selAnnee && selAnnee.querySelector(`option[value="${anneeParam}"]`)) {
-      selAnnee.value = anneeParam;
-      filteredMemoires = allMemoires.filter(m => m.anneeAcademique === anneeParam);
-    }
-  }
-
   renderMemoires();
   renderStats();
   renderTemoignages(temoignages);

@@ -56,7 +56,13 @@ export async function loadMemoiresByAnnee(annee) {
 
 export async function loadMemoiresRecents(count = 3) {
   const all = await fetchJSON('./data/memoires.json') ?? [];
-  return all.filter(m => m.statut === 'Soutenu').slice(0, count);
+  const soutenus = all.filter(m => m.statut?.toLowerCase() === 'soutenu');
+  // Trier par annéeAcademique décroissante pour avoir la dernière promo en premier
+  soutenus.sort((a, b) => (b.anneeAcademique || '').localeCompare(a.anneeAcademique || ''));
+  // Garder uniquement la dernière année
+  const derniereAnnee = soutenus[0]?.anneeAcademique;
+  const dernierPromo = derniereAnnee ? soutenus.filter(m => m.anneeAcademique === derniereAnnee) : soutenus;
+  return dernierPromo.slice(0, count);
 }
 
 export async function loadAnneesAcademiques() {
