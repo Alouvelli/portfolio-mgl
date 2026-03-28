@@ -114,12 +114,12 @@
   },
 
   "fiche_depot": {
-    "fichierUrl": null
+    "fichierUrl": "/docs/fiche-depot-validation-sujet.docx"
   },
 
   "fiche_suivi": {
-    "fichierViergeUrl": null,
-    "fichierExempleUrl": null
+    "fichierViergeUrl": "/docs/fiche-suivi-encadrements-vierge.docx",
+    "fichierExempleUrl": "/docs/fiche-suivi-encadrements-exemple-kfaye.pdf"
   },
 
   "modalites_soutenance": {

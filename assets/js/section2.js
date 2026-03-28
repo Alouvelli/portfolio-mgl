@@ -141,9 +141,17 @@ function renderDocuments({ guide, ficheDepot, ficheSuivi }) {
         <h4>${escapeHtml(doc.titre)}</h4>
         <p style="font-size:var(--text-sm);color:var(--text-secondary);margin-bottom:12px;">${escapeHtml(doc.description)}</p>
         ${doc.fichierUrl
-          ? `<a href="${escapeHtml(doc.fichierUrl)}" target="_blank" rel="noopener" class="btn btn-download btn-sm">
-               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Télécharger
-             </a>`
+          ? (() => {
+              const ext = doc.fichierUrl.split('.').pop().toLowerCase();
+              const isDocx = ext === 'docx' || ext === 'doc';
+              const formatLabel = isDocx ? ' Word (.docx)' : ' PDF';
+              const attrs = isDocx
+                ? `href="${escapeHtml(doc.fichierUrl)}" download rel="noopener"`
+                : `href="${escapeHtml(doc.fichierUrl)}" target="_blank" rel="noopener"`;
+              return `<a ${attrs} class="btn btn-download btn-sm">
+               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Télécharger${formatLabel}
+             </a>`;
+            })()
           : `<span style="font-size:var(--text-xs);color:var(--text-muted);font-style:italic;">Document à venir</span>`
         }
       </div>
