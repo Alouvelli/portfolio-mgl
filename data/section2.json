@@ -70,7 +70,7 @@
   },
 
   "guide_redaction": {
-    "fichierUrl": "./docs/canevas-memoire-master-gl-2024.pdf",
+    "fichierUrl": "/docs/canevas-memoire-master-gl-2024.pdf",
     "version": "Janvier 2024",
     "auteur": "Pr Samba NDIAYE — UCAD/FST, Président COS ISI",
     "chapitres": [

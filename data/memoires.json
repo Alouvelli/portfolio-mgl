@@ -20,7 +20,7 @@
     "thematique": "Intelligence Artificielle",
     "motsCles": ["IA générative", "LLM", "agrégation de modèles", "NLP"],
     "pages": 105,
-    "fichierUrl": "./docs/memoire-abotsi-salomon-ai-m2gl-2025.pdf"
+    "fichierUrl": "/docs/memoire-abotsi-salomon-ai-m2gl-2025.pdf"
   },
   {
     "id": "m2",
@@ -43,7 +43,7 @@
     "thematique": "Génie Logiciel",
     "motsCles": ["gestion transit", "logistique", "application web", "STIA"],
     "pages": 84,
-    "fichierUrl": "./docs/memoire-faye-gestion-transit-stia-m2gl-2024.pdf"
+    "fichierUrl": "/docs/memoire-faye-gestion-transit-stia-m2gl-2024.pdf"
   },
   {
     "id": "m3",
@@ -66,6 +66,6 @@
     "thematique": "Santé Numérique",
     "motsCles": ["rendez-vous médical", "plateforme santé", "gestion clinique", "web"],
     "pages": 77,
-    "fichierUrl": "./docs/memoire-hassan-farah-rdv-medical-m2gl-2023.pdf"
+    "fichierUrl": "/docs/memoire-hassan-farah-rdv-medical-m2gl-2023.pdf"
   }
 ]
