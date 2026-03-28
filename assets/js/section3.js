@@ -155,7 +155,7 @@ function renderMemoires() {
           </div>` : ''}
         ${m.fichierUrl ? `
           <div style="margin-top:12px;">
-            <a href="${escapeHtml(m.fichierUrl)}" target="_blank" rel="noopener" class="btn btn-download btn-sm"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Résumé</a>
+            <a href="${escapeHtml(m.fichierUrl)}" download rel="noopener" class="btn btn-download btn-sm"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Télécharger le mémoire</a>
           </div>` : ''}
       </div>
     `;
